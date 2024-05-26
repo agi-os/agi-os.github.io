@@ -1,0 +1,251 @@
+---
+import { getCollection } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import ArrowCard from "@components/ArrowCard"
+import StackCard from "@components/StackCard.astro"
+import { SITE, SOCIALS } from "@consts"
+import TwinklingStars from "@components/TwinklingStars.astro"
+import MeteorShower from "@components/MeteorShower.astro"
+
+const posts = (await getCollection("blog"))
+.filter(post => !post.data.draft)
+.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+.slice(0,3)
+
+const projects = (await getCollection("projects"))
+.filter(project => !project.data.draft)
+.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+.slice(0,3)
+
+const stack = [
+{
+text: "Astro",
+icon: "astro",
+href: "https://astro.build"
+},
+{
+text: "Javascript",
+icon: "javascript",
+href: "https://www.javascript.com"
+},
+{
+text: "Tailwind",
+icon: "tailwind",
+href: "https://tailwindcss.com"
+},
+]
+---
+
+<PageLayout title="Home" description={SITE.DESCRIPTION}>
+
+  <!-- Light Mode: Particles -->
+  <div class='absolute inset-0 block dark:hidden'>
+    <div id='particles1' class='fixed inset-0'></div>
+    <div id='particles2' class='fixed inset-0'></div>
+    <div id='particles3' class='fixed inset-0'></div>
+  </div>
+
+  <!-- Dark Theme: Stars -->
+  <div class='absolute inset-0 bg-black hidden dark:block'>
+    <div id='stars1' class='fixed inset-0'></div>
+    <div id='stars2' class='fixed inset-0'></div>
+    <div id='stars3' class='fixed inset-0'></div>
+  </div>
+
+  <!-- Dark Theme: Twinkling Stars / Metors -->
+  <div id="galaxy" class="fixed inset-0">
+    <div class="hidden dark:block">
+      <TwinklingStars />
+      <MeteorShower />
+    </div>
+  </div>
+
+  <script is:inline src="/js/bg.js"></script>
+
+  <!-- HERO -->
+  <section class="relative h-screen w-full">
+    <div id="planetcont" class='animate absolute inset-0 top-1/4 overflow-hidden'>
+      <div id="crescent"
+        class='absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%'>
+        <div id="planet"
+          class='w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center'>
+          <div id="blur" class='w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl' />
+        </div>
+      </div>
+    </div>
+    <div class="animate absolute h-full w-full flex items-center justify-center">
+      <div class='relative w-full h-full flex items-center justify-center'>
+        <div class='p-5 text-center'>
+          <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
+            Democratizing AI
+          </p>
+          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
+            AGI OS - Open, Powerful, For Everyone
+          </p>
+          <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
+            Open-source automation platform for building intelligent systems, inspired by Factorio.
+          </p>
+          <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
+            <a href='/community'
+              class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
+              Join the Community
+            </a>
+            <a href='/start'
+              class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="relative bg-white dark:bg-black">
+    <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16">
+
+      <section class="animate" id="what-is-agi-os"> {/* Added an ID for potential linking */}
+        <article>
+          <div class="container"> {/* Assuming you might use a container for layout */}
+            <h2>What is AGI OS?</h2>
+            <p class="intro-text">
+              AGI OS is an open-source platform that empowers you to build intelligent, automated systems inspired by
+              the flexibility and power of Factorio. Whether you're a seasoned developer, a business seeking efficiency,
+              or simply curious about the future of AI, AGI OS provides the tools to bring your ideas to life.
+            </p>
+
+            <div class="user-benefits"> {/* Add a class for styling later */}
+              <div class="benefit">
+                <h3><span role="img" aria-label="Developer Icon">💻</span> For Developers</h3>
+                <ul>
+                  <li>Leverage a powerful node-based architecture to create sophisticated automation workflows.</li>
+                  <li>Access a rich library of pre-built blueprints or craft your own custom solutions.</li>
+                  <li>Contribute to a growing open-source community and shape the future of AI.</li>
+                </ul>
+              </div>
+              <div class="benefit">
+                <h3><span role="img" aria-label="Business Icon">💼</span> For Businesses</h3>
+                <ul>
+                  <li>Streamline your operations and increase efficiency by automating complex tasks.</li>
+                  <li>Reduce costs by leveraging the power of open-source software and community support.</li>
+                  <li>Gain a competitive edge by rapidly adapting to changing market demands.</li>
+                </ul>
+              </div>
+              <div class="benefit">
+                <h3><span role="img" aria-label="Everyone Icon">🌐</span> For Everyone</h3>
+                <ul>
+                  <li>Democratizing access to powerful AI tools, regardless of technical expertise.</li>
+                  <li>Explore the potential of automation and contribute to a more open and innovative future.</li>
+                  <li>Learn, experiment, and collaborate with a passionate community of AI enthusiasts.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      {/* Factorio-Inspired Architecture */}
+      <section class="animate" id="architecture">
+        <article class="prose lg:prose-xl mx-auto px-4">
+          <h2 class="text-2xl font-bold mb-4">Intuitive, Modular, Scalable</h2>
+
+          {/* Paragraph 1: Introduce the Concept */}
+          <p>
+            AGI OS is built on a unique architecture inspired by the popular game Factorio. Just like connecting
+            machines and resources in Factorio, AGI OS lets you design powerful automation workflows by linking together
+            modular components called "Nodes."
+          </p>
+
+          {/* Visual 1: Simple Node Network Diagram (Optional) */}
+          <!-- <img src="/images/simple-node-network.svg" alt="Simple AGI OS Node Network" class="mx-auto my-4"> -->
+
+          {/* Paragraph 2: Explain Benefits (Modularity, Flexibility, Scalability) */}
+          <p>
+            This modular approach offers incredible flexibility. You can start small with a simple automation and easily
+            scale up to complex systems as your needs grow. AGI OS adapts to your demands, whether you're automating a
+            single task or orchestrating an entire business process.
+          </p>
+
+
+          {/* Visual 2 (Optional): More Detailed Node Diagram (Specific Use Case) */}
+          <!-- <img src="/images/data-processing-node.svg" alt="AGI OS Data Processing Node Example" class="mx-auto my-4"> -->
+
+          {/* Call to Action (Optional, but recommended) */}
+          <div class="text-center mt-8">
+            <a href="/architecture" class="btn btn-primary">Learn More About the Architecture</a>
+          </div>
+
+        </article>
+      </section>
+
+
+      <section class="animate" id="features-benefits">
+        <article class="prose lg:prose-xl mx-auto px-4">
+          <h2 class="text-2xl font-bold text-center mb-8">Key Features & Benefits</h2>
+
+
+
+
+          {/* Feature 2: Blueprints: A Common Language */}
+          <div class="feature-box">
+            <h3 class="text-xl font-semibold mb-4">
+              <span class="inline-block bg-blue-500 text-white rounded-full px-3 py-1 text-sm font-semibold mr-2">
+                Feature
+              </span>
+              Blueprints: Automation Language
+            </h3>
+            <p>
+              Visualize, share, and implement automation effortlessly with AGI OS Blueprints. These user-friendly
+              diagrams make it easy to design complex workflows, even without deep coding knowledge. Share your
+              blueprints with the community and discover a growing library of solutions for any task.
+            </p>
+
+            {/* Visual (Recommended): Showcase a blueprint example */}
+            <!-- <div class="blueprint-example mt-4">
+              <img src="/images/blueprint-example.svg" alt="Example of an AGI OS Blueprint"
+              class="w-full rounded-md shadow-md">
+            </div> -->
+          </div>
+
+          {/* Feature 3: Empowering Individuals and Organizations */}
+          <div class="feature-box">
+            <h3 class="text-xl font-semibold mb-4">
+              <span class="inline-block bg-blue-500 text-white rounded-full px-3 py-1 text-sm font-semibold mr-2">
+                Feature
+              </span>
+              Empowering All
+            </h3>
+            <p>
+              AGI OS is built for everyone. Whether you're a solo entrepreneur automating your business or a large
+              organization streamlining operations, our platform provides the tools to achieve your goals. Discover a
+              world of possibilities with AGI OS.
+            </p>
+          </div>
+
+        </article>
+      </section>
+
+      {/* Call to Action Section */}
+      <section class="animate" id="call-to-action">
+        <article>
+          <h2>Ready to Build the Future of AI?</h2>
+          <button>Join the Community</button>
+          <button>Explore Blueprints</button>
+
+          <button>Get Started Today</button>
+          <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
+            <a href='/join'
+              class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
+              Join the Community
+            </a>
+            <a href='/blueprints'
+              class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+              Explore Blueprints
+            </a>
+          </div>
+
+        </article>
+      </section>
+
+    </div>
+  </div>
+</PageLayout>

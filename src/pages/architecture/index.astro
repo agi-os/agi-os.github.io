@@ -1,0 +1,67 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import { SITE } from "@consts"; // Assuming this is needed for site metadata
+
+const title = "Architecture";
+
+---
+
+<PageLayout title={title} description={`${title} - Understand the tech stack and structure behind AGI OS`}>
+  <TopLayout>
+    <div class="animate">
+      <div class="page-heading text-3xl font-bold text-center text-gray-900 dark:text-white mt-8 mb-12">
+        Under the Hood: The AGI OS Architecture
+      </div>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <article class="prose lg:prose-xl mx-auto px-4 animate">
+      <p>
+        AGI OS is built with a modern tech stack that combines a powerful front-end experience with a secure and
+        flexible backend, all designed to make building and deploying AI agents easier than ever before.
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-8">Front-end Magic with React and Node-Based UI</h3>
+      <p>
+        The front-end UI, where you design and interact with your agents, is built using React. We leverage the
+        intuitive and visual power of the React Node library to provide a seamless workflow for connecting different
+        components in your agents' decision-making processes. This allows for a clear and understandable representation
+        of even the most complex AI systems.
+      </p>
+
+
+      <h3 class="text-2xl font-semibold mt-8">Secure and Flexible Backend with Node.js</h3>
+      <p>
+        The backend, responsible for handling your data and connecting to large language models (LLMs), is built with
+        Node.js. This choice ensures:
+      </p>
+
+      <ul>
+        <li><strong>Security:</strong> Your private API keys and sensitive data are handled securely, kept separate from
+          the
+          front-end for enhanced protection.</li>
+        <li><strong>Flexibility:</strong> You can easily connect to both cloud-based LLMs and models running locally on
+          your machine.
+        </li>
+      </ul>
+      </ul>
+
+
+      <h3 class="text-2xl font-semibold mt-8">Open Source and Continuously Evolving</h3>
+      <p>
+        We believe in the power of open source. The AGI OS codebase is publicly available, allowing developers to
+        contribute, extend its functionality, and build upon our foundation.
+      </p>
+
+      <div class="text-center mt-8">
+        <a href="/start" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Explore the Codebase
+        </a>
+      </div>
+
+    </article>
+  </BottomLayout>
+</PageLayout>

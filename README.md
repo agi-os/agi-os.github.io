@@ -1,1 +1,2 @@
-# agi-os.github.io
+# agi
+Awesome Gamer Insight Orchestrating System

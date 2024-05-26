@@ -1,0 +1,67 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+
+const title = "Getting Started";
+
+---
+
+<PageLayout title={title} description="Jump into the world of AGI OS - it's easier than you think!">
+  <TopLayout>
+    <div class="animate">
+      <div class="page-heading text-3xl font-bold text-center text-gray-900 dark:text-white mt-8 mb-6">
+        {title}
+      </div>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <article class="prose lg:prose-xl mx-auto px-4 animate">
+      <p>
+        Ready to explore the power of AI? AGI OS is as easy as 1, 2, 3!
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-6">1. Download AgentFlow (Your AI Playground)</h3>
+      <p>
+        AgentFlow is the visual interface where you build and interact with your AI. Think of it like a digital drawing
+        board for your AI ideas! It runs right in your web browser – no complicated setup required.
+      </p>
+
+      <ul>
+        <li><b>Privacy-focused:</b> Your data stays safe on your computer – no need to share anything online.</li>
+        <li><b>Easy Install:</b> Download and run – it's ready in minutes!</li>
+      </ul>
+
+      <div class="text-center my-4">
+        <a href="https://github.com/andraz/AgentFlow" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Download AgentFlow
+        </a>
+      </div>
+
+      <h3 class="text-2xl font-semibold mt-6">2. (Optional) Get Agent.js for Advanced AI </h3>
+      <p>
+        Want to use powerful language AI models? Agent.js acts as a bridge, connecting AgentFlow to those AI
+        capabilities. Don't worry, it's designed for privacy too!
+      </p>
+
+      <ul>
+        <li><b>Keeps things secure:</b> Your AI keys and data stay safe on your computer.</li>
+        <li><b>Works offline:</b> Use AI even without an internet connection (great for experimenting!).</li>
+        <li><b>Completely optional:</b> You only need it if you want to use advanced AI features.</li>
+      </ul>
+
+      <div class="text-center my-4">
+        <a href="https://github.com/andraz/Agent.js" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Download Agent.js (Optional)
+        </a>
+      </div>
+
+      <h3 class="text-2xl font-semibold mt-6">3. Start Building Your AI!</h3>
+      <p>
+        You're all set! Dive into the world of AGI OS and see what amazing things you can create.
+      </p>
+
+    </article>
+  </BottomLayout>
+</PageLayout>

@@ -1,0 +1,27 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import BottomLayout from "@layouts/BottomLayout.astro"
+import { formatDate } from "@lib/utils"
+import { SITE } from "@consts"
+
+const title = "About"
+
+---
+
+<PageLayout title={title} description={`${title} for ${SITE.TITLE}`}>
+  <TopLayout>
+    <div class="animate">
+      <div class="page-heading">
+        {title}
+      </div>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <article class="animate">
+      https://github.com/andraz/AgentFlow
+
+    </article>
+  </BottomLayout>
+</PageLayout>
