@@ -62,21 +62,9 @@ export const LINKS: Links = [
 // Socials
 export const SOCIALS: Socials = [
   {
-    NAME: 'Email',
-    ICON: 'email',
-    TEXT: 'andraz.kos@gmail.com',
-    HREF: 'mailto:andraz.kos@gmail.com',
-  },
-  {
     NAME: 'Github',
     ICON: 'github',
-    TEXT: 'andraz',
-    HREF: 'https://github.com/andraz/AgentFlow',
-  },
-  {
-    NAME: 'LinkedIn',
-    ICON: 'linkedin',
-    TEXT: 'andraz',
-    HREF: 'https://www.linkedin.com/in/zeniring/',
+    TEXT: 'agi-os',
+    HREF: 'https://github.com/agi-os',
   },
 ]
