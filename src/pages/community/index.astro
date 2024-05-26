@@ -1,19 +1,18 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import PageLayout from "@layouts/PageLayout.astro";
-import TopLayout from "@layouts/TopLayout.astro";
-import BottomLayout from "@layouts/BottomLayout.astro";
-import { SITE } from "@consts";
+import PageLayout from '@layouts/PageLayout.astro'
+import TopLayout from '@layouts/TopLayout.astro'
+import BottomLayout from '@layouts/BottomLayout.astro'
 
-const title = "Community";
-
+const title = 'Community'
 ---
 
-<PageLayout title={title}
+<PageLayout
+  title={title}
   description="Join the AGI OS Community - Connect, collaborate, and shape the future of open-source AI">
   <TopLayout>
     <div class="animate">
-      <div class="page-heading text-3xl font-bold text-center text-gray-900 dark:text-white mt-8 mb-12">
+      <div
+        class="page-heading text-3xl font-bold text-center text-gray-900 dark:text-white mt-8 mb-12">
         Join the AGI OS Community
       </div>
     </div>
@@ -21,24 +20,34 @@ const title = "Community";
   <BottomLayout>
     <article class="prose lg:prose-xl mx-auto px-4 animate">
       <p>
-        AGI OS is more than just software; it's a growing community of developers, AI enthusiasts, and automation
-        experts. Connect with us to:
+        AGI OS is more than just software; it's a growing community of
+        developers, AI enthusiasts, and automation experts. Connect with us to:
       </p>
 
       <ul class="list-disc list-outside">
-        <li><b>Get Help:</b> Ask questions, troubleshoot issues, and find support from the community and the AGI OS
-          team.
+        <li>
+          <b>Get Help:</b> Ask questions, troubleshoot issues, and find support from
+          the community and the AGI OS team.
         </li>
-        <li><b>Share Your Work:</b> Showcase your projects, share your blueprints, and inspire others with your
-          creations.
+        <li>
+          <b>Share Your Work:</b> Showcase your projects, share your blueprints,
+          and inspire others with your creations.
         </li>
-        <li><b>Collaborate:</b> Work together on open-source projects, contribute to the AGI OS codebase, and shape the
-          future of AI.</li>
-        <li><b>Stay Updated:</b> Be the first to know about new releases, features, events, and opportunities.</li>
+        <li>
+          <b>Collaborate:</b> Work together on open-source projects, contribute to
+          the AGI OS codebase, and shape the future of AI.
+        </li>
+        <li>
+          <b>Stay Updated:</b> Be the first to know about new releases, features,
+          events, and opportunities.
+        </li>
       </ul>
 
       <div class="text-center mt-8">
-        <a href="https://discord.gg/XGDPRY3S" target="_blank" rel="noopener noreferrer"
+        <a
+          href="https://discord.gg/XGDPRY3S"
+          target="_blank"
+          rel="noopener noreferrer"
           class="btn btn-primary inline-flex items-center">
           Join us on Discord
         </a>

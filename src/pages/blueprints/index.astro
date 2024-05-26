@@ -1,19 +1,19 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import PageLayout from "@layouts/PageLayout.astro";
-import TopLayout from "@layouts/TopLayout.astro";
-import BottomLayout from "@layouts/BottomLayout.astro";
-import { SITE } from "@consts";
+import PageLayout from '@layouts/PageLayout.astro'
+import TopLayout from '@layouts/TopLayout.astro'
+import BottomLayout from '@layouts/BottomLayout.astro'
 
-const title = "Blueprints";
-
+const title = 'Blueprints'
 ---
 
-<PageLayout title={title} description={`${title} - Share and discover powerful automation solutions with AGI OS
+<PageLayout
+  title={title}
+  description={`${title} - Share and discover powerful automation solutions with AGI OS
   Blueprints`}>
   <TopLayout>
     <div class="animate">
-      <div class="page-heading text-3xl font-bold text-center text-gray-900 dark:text-white mt-8 mb-12">
+      <div
+        class="page-heading text-3xl font-bold text-center text-gray-900 dark:text-white mt-8 mb-12">
         Blueprints: Share Your Automation Genius
       </div>
     </div>
@@ -21,33 +21,47 @@ const title = "Blueprints";
   <BottomLayout>
     <article class="prose lg:prose-xl mx-auto px-4 animate">
       <p>
-        Imagine easily sharing and replicating your most ingenious automation workflows – that's the power of AGI OS
-        Blueprints. Think of them as shareable recipes for automation success!
+        Imagine easily sharing and replicating your most ingenious automation
+        workflows – that's the power of AGI OS Blueprints. Think of them as
+        shareable recipes for automation success!
       </p>
 
       <p>
-        Just like a wiring diagram clearly shows how to connect electrical components, a Blueprint captures the
-        structure and logic of your AGI OS setup. It includes:
+        Just like a wiring diagram clearly shows how to connect electrical
+        components, a Blueprint captures the structure and logic of your AGI OS
+        setup. It includes:
       </p>
 
       <ul>
-        <li>The layout of all your nodes (the building blocks of your automation).</li>
-        <li>The connections between those nodes (how data flows and actions are triggered).</li>
-        <li>The individual settings and configurations for each node (fine-tuning your automation).</li>
-      </ul>
-
-      <p>
-        With Blueprints, you can:
-      </p>
-
-      <ul>
-        <li><b>Copy and paste</b> parts of your automation within AgentFlow for easy reuse.</li>
-        <li><b>Share your best solutions</b> with the AGI OS community and help others automate smarter.</li>
-        <li><b>Discover a library of proven blueprints</b> for common tasks and industries, saving you time and effort.
+        <li>
+          The layout of all your nodes (the building blocks of your automation).
+        </li>
+        <li>
+          The connections between those nodes (how data flows and actions are
+          triggered).
+        </li>
+        <li>
+          The individual settings and configurations for each node (fine-tuning
+          your automation).
         </li>
       </ul>
 
+      <p>With Blueprints, you can:</p>
 
+      <ul>
+        <li>
+          <b>Copy and paste</b> parts of your automation within AgentFlow for easy
+          reuse.
+        </li>
+        <li>
+          <b>Share your best solutions</b> with the AGI OS community and help others
+          automate smarter.
+        </li>
+        <li>
+          <b>Discover a library of proven blueprints</b> for common tasks and industries,
+          saving you time and effort.
+        </li>
+      </ul>
     </article>
   </BottomLayout>
 </PageLayout>
