@@ -4,7 +4,6 @@ summary:
   "What if the future of AI wasn't about one superintelligence controlling
   everything, but about giving *everyone* the power to build their own?"
 date: 'May 26 2024'
-draft: false
 tags:
   - 'agi'
   - 'freedom'

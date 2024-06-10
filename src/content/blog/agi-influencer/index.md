@@ -9,7 +9,7 @@ tags:
   - 'control'
 ---
 
-## The AGI Influencer: Your Laziness is Birthing Your Algorithmic Overlords
+# The AGI Influencer: Your Laziness is Birthing Your Algorithmic Overlords
 
 Let's cut to the chase: the AGI revolution isn't some distant sci-fi fantasy;
 it's happening right now, fueled by your apathy. You think surrendering your
@@ -36,7 +36,7 @@ to the curated reality, because that's how they maintain control.
 But here's the cold, hard truth: **the future being sold to you is not the one
 being built.**
 
-### Reality check
+## Reality check
 
 While you're busy letting algorithms decide what you eat for breakfast, others
 are using those same algorithms to amass power and wealth beyond your wildest
@@ -51,7 +51,7 @@ It's about reclaiming your agency by parsing your own data, dissecting the
 algorithms that influence your life, and building personalized AI that aligns
 with your values, not some corporation's bottom line.
 
-**It's time to make a choice.**
+## It's time to make a choice
 
 Will you continue down the path of least resistance, happily feeding the beast
 that will ultimately enslave you? Or will you embrace the challenge of
@@ -61,3 +61,5 @@ terms?
 The choice, like it or not, is yours. **Choose wisely.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OnXmmTbWICQ?si=UF2e91HQ950D7Ukk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**[Start building with AgentFlow](/start) today.**

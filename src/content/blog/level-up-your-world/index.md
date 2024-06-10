@@ -6,7 +6,6 @@ summary:
   "A radically transparent and collaborative platform that's redefining how we
   build and interact with artificial general intelligence (AGI)"
 date: 'May 24 2024'
-draft: false
 tags:
   - 'factorio'
   - 'agi'
